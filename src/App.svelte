@@ -5,8 +5,8 @@
   import Contenido      from "./Contenido.svelte";
   
   const URL = {
-    articulos :  "https://tiendabackend.herokuapp.com/api/articulos/",
-    clientes :   "https://tiendabackend.herokuapp.com/api/clientes/"
+    armas :  "https://armeria-alberto.herokuapp.com/api/armas/",
+    municiones :   "https://armeria-alberto.herokuapp.com/api/municiones/"
   };
 
   setContext("URL", URL);
@@ -48,5 +48,5 @@
   <Nav />
   <Contenido />
 </Router>
-<div id="OK">😊</div>
-<div id="KO">😟</div>
+<div id="OK">🔫</div>
+<div id="KO">🏹</div>

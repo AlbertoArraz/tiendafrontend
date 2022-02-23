@@ -1,7 +1,5 @@
 <script>
-  import Boton from "./Boton.svelte";
-  
-  export let cliente = {};
+  export let arma = {};
 </script>
 
 <style>
@@ -33,10 +31,6 @@
     max-width: 140px;
   }
 
-  /* input[type="number"] {
-    text-align: right;
-    width: 100px;
-  } */
   input:focus {
     background-color: wheat;
   }
@@ -47,8 +41,8 @@
   }
 </style>
 
-<div class="card" on:click>
-  <input bind:value={cliente.nombre} class="title" />
-  <input bind:value={cliente.apellidos} class="title" />
+<div class="card">
+  <input bind:value={arma.modelo} class="title" />
+  <input bind:value={arma.calibre} class="title" />
   <slot />
 </div>

@@ -3,23 +3,23 @@
   import { jsonData }            from "./store.js";
 
   import Buscar                  from "./Buscar.svelte";
-  import Articulo                from "./Articulo.svelte";
+  import Arma                from "./Arma.svelte";
   import Boton                   from "./Boton.svelte";
 
   const URL = getContext("URL");
 
   let busqueda = "";
-  let articulo = {};
+  let arma = {};
 
   onMount(async () => {
-    const response = await fetch(URL.articulos);
+    const response = await fetch(URL.armas);
     const data = await response.json();
     $jsonData = data;
   });
 
   $: regex = new RegExp(busqueda, "i");
   $: datos = busqueda 
-    ? $jsonData.filter(item => regex.test(item.nombre))
+    ? $jsonData.filter(item => regex.test(item.modelo))
     : $jsonData;
 
 </script>
@@ -34,24 +34,24 @@
   }
 </style>
 
-<h1>ARTÍCULOS</h1>
+<h1>ARMAS</h1>
 <Buscar bind:busqueda />
 
 <div class="container">
-  <Articulo bind:articulo>
+  <Arma bind:arma>
     <div style="text-align: right">
-      <Boton documento={articulo} tipo="insertar" coleccion="articulos" />
+      <Boton documento={arma} tipo="insertar" coleccion="armas" />
     </div>
-  </Articulo>
+  </Arma>
 </div>
 
 <div class="container">
-  {#each datos as articulo}
-    <Articulo {articulo}>
+  {#each datos as arma}
+    <Arma {arma}>
       <div style="text-align: right">
-        <Boton documento={articulo} tipo="modificar" coleccion="articulos" />
-        <Boton documento={articulo} tipo="eliminar"  coleccion="articulos" />
+        <Boton documento={arma} tipo="modificar" coleccion="armas" />
+        <Boton documento={arma} tipo="eliminar"  coleccion="armas" />
       </div>
-    </Articulo>
+    </Arma>
   {/each}
 </div>

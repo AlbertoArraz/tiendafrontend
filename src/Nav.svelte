@@ -69,8 +69,8 @@
     }
 
     .inicio::after,
-    .articulos::after,
-    .clientes::after {
+    .armas::after,
+    .municiones::after {
       display: inline-block;
       padding-left: 10px;
     }
@@ -78,11 +78,11 @@
     .inicio::after {
       content: "Inicio";
     }
-    .articulos::after {
-      content: "Artículos";
+    .armas::after {
+      content: "Armas";
     }
-    .clientes::after {
-      content: "Clientes";
+    .municiones::after {
+      content: "Municiones";
     }
   }
   /* PC */
@@ -109,13 +109,13 @@
       </Link>
     </li>
     <li class="item active">
-      <Link to="/articulos">
-        <span class="articulos">🎁</span>
+      <Link to="/armas">
+        <span class="armas">🔫</span>
       </Link>
     </li>
     <li class="item active">
-      <Link to="/clientes">
-        <span class="clientes">👥</span>
+      <Link to="/municiones">
+        <span class="municiones">🪤</span>
       </Link>
     </li>
   </ul>

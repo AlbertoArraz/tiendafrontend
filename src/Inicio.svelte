@@ -54,7 +54,7 @@
   }
 </style>
 
-<h1>Tienda Frontend</h1>
+<h1>Armeria - Frontend</h1>
 <p>
   <small>
     <b>Progressive Web App (PWA)</b>
@@ -63,8 +63,8 @@
 <p>
   <small>
     Backend en
-    <a href="https://tiendabackend.herokuapp.com">
-      https://tiendabackend.herokuapp.com
+    <a href="https://armeria-alberto.herokuapp.com/">
+      https://armeria-alberto.herokuapp.com/
     </a>
   </small>
 </p>
@@ -78,20 +78,20 @@
     </div>
   </Link>
 
-  <Link to="/articulos">
+  <Link to="/armas">
     <div class="resumen">
-      <span class="opcion">🎁 Artículos</span>
+      <span class="opcion">🔫 Armas</span>
       <span class="descripcion">
-        Operaciones CRUD de artículos en una BD.
+        Operaciones CRUD de Armas en una BD.
       </span>
     </div>
   </Link>
 
-  <Link to="/clientes">
+  <Link to="/municiones">
     <div class="resumen">
-      <span class="opcion">👥 Clientes</span>
+      <span class="opcion">🪤 Municiones</span>
       <span class="descripcion">
-        Operaciones CRUD de clientes en una BD.
+        Operaciones CRUD de Municiones en una BD.
       </span>
     </div>
   </Link>
@@ -101,8 +101,8 @@
   <small>
     <b>
       Código fuente en
-      <a href="https://github.com/jamj2000/tiendafrontend">
-        https://github.com/jamj2000/tiendafrontend
+      <a href="https://github.com/AlbertoArraz/tiendafrontend">
+        https://github.com/AlbertoArraz/tiendafrontend
       </a>
     </b>
   </small>
